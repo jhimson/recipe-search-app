@@ -1,8 +1,11 @@
 import React from 'react';
+// ! Components
+import SearchBar from './SearchBar';
+// !-------------------------------->
 
 const Main = () => (
   <div className="h-screen">
-    <h1>Recipe app</h1>
+    <SearchBar />
   </div>
 );
 
