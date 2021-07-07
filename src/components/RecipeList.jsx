@@ -2,7 +2,7 @@ import React from 'react';
 import RecipeItem from './RecipeItem';
 
 const RecipeList = ({ list, loading }) => (
-  <div className="grid p-3 mt-5 bg-gray-200 lg:grid-cols-2 lg:gap-x-2 xl:grid-cols-3">
+  <div className="grid p-3 mt-5 bg-gray-100 lg:grid-cols-2 lg:gap-x-2 xl:grid-cols-3">
     {list.map((item) => (
       <RecipeItem
         loading={loading}

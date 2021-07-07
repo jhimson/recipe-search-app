@@ -3,6 +3,7 @@ import Axios from 'axios';
 // ! Components
 import SearchBar from './SearchBar';
 import RecipeList from './RecipeList';
+import Header from './Header';
 // !-------------------------------->
 
 const Main = () => {
@@ -19,6 +20,7 @@ const Main = () => {
 
   return (
     <div className="h-screen">
+      <Header />
       <SearchBar submitSearch={submitSearch} />
       <RecipeList list={recipes} loading={isLoading} />
     </div>
