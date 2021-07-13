@@ -1,5 +1,6 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react';
+import React, { useState } from 'react';
 import Loader from 'react-loader-spinner';
 import Modal from './Modal';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
@@ -12,8 +13,9 @@ const RecipeItem = ({
   dishType,
   ingredients,
   calories,
-}) =>
-  loading ? (
+}) => {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+  return loading ? (
     <div className="flex items-center justify-center p-2 m-2 space-x-10 space-y-10 bg-blue-200">
       <Loader
         type="Puff"
@@ -25,7 +27,11 @@ const RecipeItem = ({
     </div>
   ) : (
     <>
-      <Modal ingredients={ingredients} />
+      <Modal
+        ingredients={ingredients}
+        isOpen={modalIsVisible}
+        setIsOpen={setModalIsVisible}
+      />
       <div className="flex flex-col items-center justify-start p-5 mt-5 bg-blue-200 rounded-lg">
         <h1 className="font-mono text-xl font-bold tracking-widest text-center">
           {title}
@@ -49,6 +55,14 @@ const RecipeItem = ({
             <span className="font-mono capitalize">{dishType || 'N/A'}</span>
           </div>
         </div>
+        <div className="flex items-center justify-center w-full">
+          <button
+            onClick={() => setModalIsVisible(true)}
+            className="w-1/4 py-2 mt-5 font-semibold bg-white rounded-lg shadow-lg hover:bg-gray-400 hover:text-white focus:outline-none"
+          >
+            View Ingredients
+          </button>
+        </div>
         {/* <div className="w-full text-left ingredients">
         <h1 className="mt-5 font-mono text-xl">Ingredients:</h1>
         <ul>
@@ -64,5 +78,6 @@ const RecipeItem = ({
       </div>
     </>
   );
+};
 
 export default RecipeItem;
