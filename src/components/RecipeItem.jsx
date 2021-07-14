@@ -27,13 +27,13 @@ const RecipeItem = ({
     </div>
   ) : (
     <>
-      <Modal
+      {/* <Modal
         ingredients={ingredients}
         isOpen={modalIsVisible}
         setIsOpen={setModalIsVisible}
-      />
-      <div className="flex flex-col items-center justify-start p-5 mt-5 bg-blue-200 rounded-lg">
-        <h1 className="font-mono text-xl font-bold tracking-widest text-center">
+      /> */}
+      <div className="flex flex-col items-center w-3/4 px-5 py-10 my-10 bg-white rounded-lg shadow-2xl lg:w-11/12 ">
+        <h1 className="font-serif text-xl font-bold tracking-widest text-center">
           {title}
         </h1>
         <h2 className="mb-5 text-sm">
@@ -43,14 +43,14 @@ const RecipeItem = ({
         <img
           src={image}
           alt="image not available"
-          className="border-2 border-gray-400 rounded-full shadow-lg"
+          className="object-cover mb-5 border-2 border-gray-400 rounded-full h-60"
         />
-        <div className="flex w-full mt-5 space-x-1 tracking-widest shadow-lg">
-          <div className="w-1/2 p-2 px-3 bg-blue-400 border-2 border-blue-600 rounded-md">
+        <div className="flex justify-center w-full mt-5 space-x-1 shadow-lg">
+          <div className="w-1/2 p-2 px-3 break-words bg-blue-400 border-2 border-blue-600 rounded-md lg:w-1/2">
             <span className="font-bold">Cuisine:</span>{' '}
             <span className="font-mono capitalize">{cuisineType || 'N/A'}</span>
           </div>
-          <div className="w-1/2 p-2 px-3 text-sm bg-blue-400 border-2 border-blue-600 rounded-md">
+          <div className="w-1/2 p-2 px-3 text-sm break-words bg-blue-400 border-2 border-blue-600 rounded-md lg:w-1/2">
             <span className="font-bold">Dish:</span>{' '}
             <span className="font-mono capitalize">{dishType || 'N/A'}</span>
           </div>
@@ -58,23 +58,11 @@ const RecipeItem = ({
         <div className="flex items-center justify-center w-full">
           <button
             onClick={() => setModalIsVisible(true)}
-            className="w-1/4 py-2 mt-5 font-semibold bg-white rounded-lg shadow-lg hover:bg-gray-400 hover:text-white focus:outline-none"
+            className="w-1/2 py-2 mt-5 font-semibold bg-white border-2 border-gray-400 rounded-lg shadow-lg lg:w-1/2 hover:bg-gray-400 hover:text-white focus:outline-none hover:border-white"
           >
             View Ingredients
           </button>
         </div>
-        {/* <div className="w-full text-left ingredients">
-        <h1 className="mt-5 font-mono text-xl">Ingredients:</h1>
-        <ul>
-          {ingredients.length !== 0
-            ? ingredients.map((ingredient) => (
-                <li key={ingredient} className="text-sm text-gray-600">
-                  {ingredient}
-                </li>
-              ))
-            : null}
-        </ul>
-      </div> */}
       </div>
     </>
   );

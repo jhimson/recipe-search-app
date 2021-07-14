@@ -3,7 +3,7 @@ import RecipeItem from './RecipeItem';
 
 const RecipeList = ({ list, loading }) =>
   list.length !== 0 ? (
-    <div className="grid p-3 mt-5 bg-gray-100 lg:grid-cols-2 lg:gap-x-2 xl:grid-cols-3">
+    <div className="grid justify-center mt-10 bg-gray-200 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-y-5">
       {list.map((item) => (
         <RecipeItem
           loading={loading}

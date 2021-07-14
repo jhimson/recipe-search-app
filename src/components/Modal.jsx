@@ -5,7 +5,7 @@ const Modal = ({ ingredients, isOpen, setIsOpen }) => (
   <div
     className={`fixed top-0 left-0 flex items-center justify-center w-full h-screen transition duration-300 mt-16 mb-16 ml-auto mr-auto transform ${
       isOpen ? 'translate-y-4' : '-translate-y-full'
-    } bg-black bg-opacity-40 modal-bg`}
+    } bg-black bg-opacity-30 modal-bg`}
   >
     <div className="w-1/3 h-auto p-5 bg-gray-100 rounded-lg modal-container">
       <div className="flex justify-end">
