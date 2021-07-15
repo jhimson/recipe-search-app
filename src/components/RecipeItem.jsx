@@ -32,7 +32,7 @@ const RecipeItem = ({
         isOpen={modalIsVisible}
         setIsOpen={setModalIsVisible}
       /> */}
-      <div className="flex flex-col items-center w-3/4 px-5 py-10 my-10 bg-white rounded-lg shadow-2xl lg:w-11/12 ">
+      <div className="flex flex-col items-center w-3/4 px-5 py-10 my-10 bg-white border-gray-600 rounded-lg shadow-2xl border-1 lg:w-11/12 ">
         <h1 className="font-serif text-xl font-bold tracking-widest text-center">
           {title}
         </h1>
