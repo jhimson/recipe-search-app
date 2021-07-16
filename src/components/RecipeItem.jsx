@@ -27,11 +27,13 @@ const RecipeItem = ({
     </div>
   ) : (
     <>
-      {/* <Modal
-        ingredients={ingredients}
-        isOpen={modalIsVisible}
-        setIsOpen={setModalIsVisible}
-      /> */}
+      {modalIsVisible ? (
+        <Modal
+          ingredients={ingredients}
+          isOpen={modalIsVisible}
+          setIsOpen={setModalIsVisible}
+        />
+      ) : null}
       <div className="flex flex-col items-center w-3/4 px-5 py-10 my-10 bg-white border-2 border-gray-200 rounded-lg shadow-2xl lg:w-11/12 ">
         <h1 className="font-serif text-xl font-bold tracking-widest text-center">
           {title}
