@@ -32,7 +32,7 @@ const RecipeItem = ({
         isOpen={modalIsVisible}
         setIsOpen={setModalIsVisible}
       /> */}
-      <div className="flex flex-col items-center w-3/4 px-5 py-10 my-10 bg-white border-gray-600 rounded-lg shadow-2xl border-1 lg:w-11/12 ">
+      <div className="flex flex-col items-center w-3/4 px-5 py-10 my-10 bg-white border-2 border-gray-200 rounded-lg shadow-2xl lg:w-11/12 ">
         <h1 className="font-serif text-xl font-bold tracking-widest text-center">
           {title}
         </h1>
@@ -46,7 +46,7 @@ const RecipeItem = ({
           className="object-cover mb-5 border-2 border-gray-400 rounded-full h-60"
         />
         <div className="flex justify-center w-full mt-5 space-x-1 shadow-lg">
-          <div className="w-1/2 p-2 px-3 break-words bg-blue-400 border-2 border-blue-600 rounded-md lg:w-1/2">
+          <div className="w-1/2 p-2 px-2 break-words bg-blue-400 border-2 border-blue-600 rounded-md lg:w-1/2">
             <span className="font-bold">Cuisine:</span>{' '}
             <span className="font-mono capitalize">{cuisineType || 'N/A'}</span>
           </div>
