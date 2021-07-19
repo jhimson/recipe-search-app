@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const Modal = ({ ingredients, isOpen, setIsOpen }) => (
-  <div className="fixed inset-0 flex items-center justify-center w-full h-screen ml-auto mr-auto transition duration-300 bg-black border-4 broder-gray-500 bg-opacity-30 modal-bg">
+  <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-screen ml-auto mr-auto transition duration-300 bg-black border-4 broder-gray-500 bg-opacity-30 modal-bg">
     <div className="w-11/12 h-auto p-5 bg-gray-100 rounded-lg lg:w-1/3 modal-container">
       <div className="flex justify-end">
         <button
