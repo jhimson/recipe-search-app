@@ -2,8 +2,10 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from 'react';
 import Loader from 'react-loader-spinner';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Modal from './Modal';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const RecipeItem = ({
   loading,
@@ -42,11 +44,17 @@ const RecipeItem = ({
           <span className="font-bold text-gray-500">Calories:</span>{' '}
           <span className="font-mono">{Math.round(calories) || 'N/A'}</span>
         </h2>
-        <img
+        <LazyLoadImage
+          alt={title}
+          src={image} // use normal <img> attributes as props
+          effect="blur"
+          className="object-cover mb-5 border-2 border-gray-400 rounded-full h-60"
+        />
+        {/* <img
           src={image}
           alt="image not available"
           className="object-cover mb-5 border-2 border-gray-400 rounded-full h-60"
-        />
+        /> */}
         <div className="flex flex-col items-center justify-center w-full mt-5 space-y-2 ">
           <div className="w-11/12 p-2 px-2 break-words bg-blue-400 border-2 border-blue-600 rounded-md md:w-9/12 lg:w-full">
             <span className="font-bold">Cuisine:</span>{' '}
