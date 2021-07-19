@@ -4,7 +4,6 @@ import Axios from 'axios';
 import SearchBar from './SearchBar';
 import RecipeList from './RecipeList';
 import Header from './Header';
-import Modal from './Modal';
 
 // !-------------------------------->
 
