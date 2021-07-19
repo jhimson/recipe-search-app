@@ -43,7 +43,11 @@ const RecipeItem = ({
         <h2 className="mb-5 text-sm">
           <span className="font-bold text-gray-500">Calories:</span>{' '}
           <span className="font-mono">{Math.round(calories) || 'N/A'}</span>
+          <span className="font-bold text-gray-500"> |</span>{' '}
+          <span className="font-bold text-gray-500">Ingredients:</span>{' '}
+          <span className="font-mono">{ingredients.length}</span>
         </h2>
+
         <LazyLoadImage
           alt={title}
           src={image} // use normal <img> attributes as props
