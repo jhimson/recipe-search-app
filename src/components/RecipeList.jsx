@@ -14,6 +14,7 @@ const RecipeList = ({ list, loading }) =>
           dishType={item.recipe.dishType}
           ingredients={item.recipe.ingredientLines}
           calories={item.recipe.calories}
+          instructions={item.recipe.url}
         />
       ))}
     </div>

@@ -15,6 +15,7 @@ const RecipeItem = ({
   dishType,
   ingredients,
   calories,
+  instructions,
 }) => {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   return loading ? (
@@ -69,13 +70,21 @@ const RecipeItem = ({
             <span className="font-mono capitalize">{dishType || 'N/A'}</span>
           </div>
         </div>
-        <div className="flex items-center justify-center w-full">
+        <div className="flex items-center justify-center w-full space-x-3">
           <button
             onClick={() => setModalIsVisible(true)}
-            className="w-1/2 py-2 mt-10 font-semibold bg-white border-2 border-gray-400 rounded-lg shadow-lg md:w-4/12 lg:w-1/2 hover:bg-gray-400 hover:text-white focus:outline-none hover:border-white"
+            className="w-1/2 py-2 mt-10 font-semibold bg-white border-2 border-gray-400 rounded-lg shadow-lg md:w-4/12 lg:w-2/5 hover:bg-gray-400 hover:text-white focus:outline-none hover:border-white"
           >
-            View Ingredients
+            Ingredients
           </button>
+          <a
+            href={instructions}
+            target="_blank"
+            rel="noreferrer"
+            className="w-1/2 py-2 mt-10 font-semibold text-center bg-white border-2 border-gray-400 rounded-lg shadow-lg md:w-4/12 lg:w-2/5 hover:bg-gray-400 hover:text-white focus:outline-none hover:border-white"
+          >
+            Instructions
+          </a>
         </div>
       </div>
     </>
