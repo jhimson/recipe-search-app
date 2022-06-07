@@ -1,1 +1,1 @@
-### Tasty Food Search app
+#### Tasty Food Search app
