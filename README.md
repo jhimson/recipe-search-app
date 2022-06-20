@@ -1,4 +1,4 @@
-#### Tasty Food Search app
+# Tasty Food Search app
 
 ### Technologies Used
 - HTML
